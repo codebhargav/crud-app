@@ -1,19 +1,18 @@
 package com.bhargav.crudapp.service.impl;
 
 import com.bhargav.crudapp.model.Student;
-import com.bhargav.crudapp.model.Student;
-import com.bhargav.crudapp.repo.studentrepo;
-import com.bhargav.crudapp.service.studentservice;
+import com.bhargav.crudapp.repo.StudentRepo;
+import com.bhargav.crudapp.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 @Service
-public class studentserviceimpl implements studentservice {
+public class StudentServiceImpl implements StudentService {
 
 
     @Autowired
-    studentrepo studentrepo;
+    StudentRepo studentrepo;
 
     @Override
     public Student create(Student student) {

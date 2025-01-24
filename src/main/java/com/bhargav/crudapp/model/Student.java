@@ -1,5 +1,6 @@
 package com.bhargav.crudapp.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,12 +13,13 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;  // This will be the primary key
-    @Column(name = "name")
-    private String name;
-    @Column(name = "email")
+
+
+    @JsonProperty
     private String email;
-    @Column(name = "rollno")
-    private int rollno;
+    @JsonProperty
+    private String name;
+    @JsonProperty
+    private int rollNo;
 
 }
